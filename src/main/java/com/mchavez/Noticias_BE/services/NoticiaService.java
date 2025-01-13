@@ -25,7 +25,7 @@ public class NoticiaService {
         return noticiaRepository.findById(id);
     }
 
-    public Optional<Noticia> findByCategoryId(String categoryId){
-        return noticiaRepository.findByCategoryId(categoryId);
+    public List<Noticia> findAllByCategoryId(String categoryId){
+        return noticiaRepository.findAllByCategoryId(categoryId);
     }
 }

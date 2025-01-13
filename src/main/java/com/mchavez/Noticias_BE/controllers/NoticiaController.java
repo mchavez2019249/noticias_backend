@@ -30,8 +30,8 @@ public class NoticiaController {
     }
 
     @GetMapping("/noticia/categoria/{categoryId}")
-    public Noticia findByCategoryId(@PathVariable String categoryId){
-        return noticiaService.findByCategoryId(categoryId).get();
+    public List<Noticia> findByCategoryId(@PathVariable String categoryId){
+        return noticiaService.findAllByCategoryId(categoryId);
     }
 
 }
