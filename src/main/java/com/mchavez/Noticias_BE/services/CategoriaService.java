@@ -20,4 +20,8 @@ public class CategoriaService {
     public List<Categoria> findAll (){
         return categoriaRespository.findAll();
     }
+
+    public Optional<Categoria> findById(String id){
+        return categoriaRespository.findById(id);
+    }
 }

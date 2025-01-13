@@ -23,4 +23,9 @@ public class CategoriaController {
     public List<Categoria> findAll(){
         return categoriaService.findAll();
     }
+
+    @GetMapping("/categoria/{id}")
+    public Categoria findById(@PathVariable String id){
+        return categoriaService.findById(id).get();
+    }
 }

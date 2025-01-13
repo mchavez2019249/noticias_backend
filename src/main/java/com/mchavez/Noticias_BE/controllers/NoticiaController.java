@@ -28,4 +28,10 @@ public class NoticiaController {
     public Noticia findById(@PathVariable String id){
         return noticiaService.findById(id).get();
     }
+
+    @GetMapping("/noticia/categoria/{id}")
+    public Noticia findByCategoryId(@PathVariable String categoryId){
+        return noticiaService.findByCategoryId(categoryId).get();
+    }
+
 }

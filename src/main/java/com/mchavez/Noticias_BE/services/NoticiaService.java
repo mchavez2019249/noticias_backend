@@ -13,8 +13,8 @@ import java.util.Optional;
 public class NoticiaService {
     private final NoticiaRepository noticiaRepository;
 
-    public void saveNoticia(Noticia noticia){
-        noticiaRepository.save(noticia);
+    public Noticia saveNoticia(Noticia noticia){
+        return noticiaRepository.save(noticia);
     }
 
     public List<Noticia> findAll (){
@@ -23,5 +23,9 @@ public class NoticiaService {
 
     public Optional<Noticia> findById(String id){
         return noticiaRepository.findById(id);
+    }
+
+    public Optional<Noticia> findByCategoryId(String categoryId){
+        return noticiaRepository.findByCategoryId(categoryId);
     }
 }
